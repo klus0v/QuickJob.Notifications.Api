@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickJob.Notifications.Api", "QuickJob.Notifications.Api\QuickJob.Notifications.Api.csproj", "{30ACCD3A-C1B6-4DEE-AC9D-086A2DDC219D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickJob.Notifications.DataModel", "QuickJob.Notifications.DataModel\QuickJob.Notifications.DataModel.csproj", "{393042AF-6F5D-4287-90FF-07F52F9914B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickJob.Notifications.Core", "QuickJob.Notifications.Core\QuickJob.Notifications.Core.csproj", "{66FB9DB5-D0B5-456C-B4D2-D579DE6B9EC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickJob.Notifications.Consumer", "QuickJob.Notifications.Consumer\QuickJob.Notifications.Consumer.csproj", "{CE555578-BBDE-4D91-B84B-8DEAE3534DC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickJob.Notifications.BusinessLogic", "QuickJob.Notifications.BusinessLogic\QuickJob.Notifications.BusinessLogic.csproj", "{D6A54E8B-E127-4337-B515-5A2884238482}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30ACCD3A-C1B6-4DEE-AC9D-086A2DDC219D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30ACCD3A-C1B6-4DEE-AC9D-086A2DDC219D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30ACCD3A-C1B6-4DEE-AC9D-086A2DDC219D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30ACCD3A-C1B6-4DEE-AC9D-086A2DDC219D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{393042AF-6F5D-4287-90FF-07F52F9914B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393042AF-6F5D-4287-90FF-07F52F9914B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393042AF-6F5D-4287-90FF-07F52F9914B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393042AF-6F5D-4287-90FF-07F52F9914B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66FB9DB5-D0B5-456C-B4D2-D579DE6B9EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66FB9DB5-D0B5-456C-B4D2-D579DE6B9EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66FB9DB5-D0B5-456C-B4D2-D579DE6B9EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66FB9DB5-D0B5-456C-B4D2-D579DE6B9EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE555578-BBDE-4D91-B84B-8DEAE3534DC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE555578-BBDE-4D91-B84B-8DEAE3534DC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE555578-BBDE-4D91-B84B-8DEAE3534DC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE555578-BBDE-4D91-B84B-8DEAE3534DC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6A54E8B-E127-4337-B515-5A2884238482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6A54E8B-E127-4337-B515-5A2884238482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6A54E8B-E127-4337-B515-5A2884238482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6A54E8B-E127-4337-B515-5A2884238482}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
