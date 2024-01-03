@@ -4,6 +4,9 @@ using QuickJob.Notifications.Api.Middlewares;
 using QuickJob.Notifications.BusinessLogic.Services;
 using QuickJob.Notifications.BusinessLogic.Services.Interfaces;
 using QuickJob.Notifications.Core.Factories;
+using QuickJob.Notifications.Core.Storages;
+using QuickJob.Notifications.Core.Storages.Interfaces;
+using QuickJob.Notifications.Core.Storages.Mongo;
 using QuickJob.Notifications.DataModel.Configuration;
 using QuickJob.Users.Client;
 using Vostok.Configuration.Sources.Json;
@@ -52,7 +55,6 @@ internal static class ServiceCollectionExtensions
         var provider = new ConfigurationProvider();
         
         provider.SetupSourceFor<ServiceSettings>(new JsonFileSource($"QuickJob.Settings/{nameof(ServiceSettings)}.json"));
-        provider.SetupSourceFor<SmtpSettings>(new JsonFileSource($"QuickJob.Settings/{nameof(SmtpSettings)}.json"));
         provider.SetupSourceFor<MongoSettings>(new JsonFileSource($"QuickJob.Settings/{nameof(MongoSettings)}.json"));
         provider.SetupSourceFor<RabbitMQSettings>(new JsonFileSource($"QuickJob.Settings/{nameof(RabbitMQSettings)}.json"));
         
@@ -61,7 +63,9 @@ internal static class ServiceCollectionExtensions
 
     public static void AddSystemServices(this IServiceCollection services) => services
         .AddDistributedMemoryCache()
-        .AddSingleton<IEventsService, EventsService>();
+        .AddSingleton<IMessagesService, MessagesService>()
+        .AddSingleton<ITemplatesStorage, TemplatesStorage>()
+        .AddSingleton<IMongoProvider, MongoProvider>();
 
     public static void UseServiceCors(this IApplicationBuilder builder) => 
         builder.UseCors(FrontSpecificOrigins);
@@ -76,9 +80,6 @@ internal static class ServiceCollectionExtensions
         services
             .AddSingleton<MongoFactory>()
             .TryAddSingleton(x => x.GetRequiredService<MongoFactory>().GetClient());
-        services
-            .AddSingleton<SmtpClientFactory>()
-            .TryAddSingleton(x => x.GetRequiredService<SmtpClientFactory>().GetClient());
     }
 
     public static void AddRabbitMq(this IServiceCollection services)

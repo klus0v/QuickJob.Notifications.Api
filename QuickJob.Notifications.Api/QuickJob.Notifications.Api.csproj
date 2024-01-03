@@ -17,7 +17,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\QuickJob.Notifications.BusinessLogic\QuickJob.Notifications.BusinessLogic.csproj" />
-      <ProjectReference Include="..\QuickJob.Notifications.Core\QuickJob.Notifications.Core.csproj" />
     </ItemGroup>
 
 </Project>

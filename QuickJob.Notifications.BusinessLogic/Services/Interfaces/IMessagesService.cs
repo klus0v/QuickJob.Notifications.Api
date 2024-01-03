@@ -2,7 +2,7 @@ using QuickJob.Notifications.DataModel.API.Requests.Email;
 
 namespace QuickJob.Notifications.BusinessLogic.Services.Interfaces;
 
-public interface IEventsService
+public interface IMessagesService
 {
-    Task SendEmailEvent(SendEmailRequest request);
+    Task SendEmailMessage(SendEmailRequest request);
 }

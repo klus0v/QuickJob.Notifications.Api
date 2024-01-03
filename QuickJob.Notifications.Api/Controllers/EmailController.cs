@@ -8,15 +8,15 @@ namespace QuickJob.Notifications.Api.Controllers;
 [Route("[controller]")]
 public class EmailController : ControllerBase
 {
-    private readonly IEventsService eventsService;
+    private readonly IMessagesService _messagesService;
 
-    public EmailController(IEventsService eventsService) => 
-        this.eventsService = eventsService;
+    public EmailController(IMessagesService messagesService) => 
+        this._messagesService = messagesService;
 
     [HttpPost]
     public async Task<IActionResult> SendEmail(SendEmailRequest request)
     {
-        await eventsService.SendEmailEvent(request);
+        await _messagesService.SendEmailMessage(request);
         return Ok();
     }
 }

@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\QuickJob.Notifications.Core\QuickJob.Notifications.Core.csproj" />
       <ProjectReference Include="..\QuickJob.Notifications.DataModel\QuickJob.Notifications.DataModel.csproj" />
     </ItemGroup>
 

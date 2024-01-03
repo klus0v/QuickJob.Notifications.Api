@@ -2,7 +2,6 @@ using MassTransit;
 using QuickJob.Notifications.Core.Extensions;
 using QuickJob.Notifications.Core.Services.Interfaces;
 using QuickJob.Notifications.Core.Storages.Interfaces;
-using QuickJob.Notifications.DataModel.Constants;
 using QuickJob.Notifications.DataModel.Entities.RabbitMQ;
 using QuickJob.Notifications.DataModel.Entities.Spam;
 using Vostok.Logging.Abstractions;
@@ -28,7 +27,7 @@ public sealed class SendEmailConsumer: IConsumer<SendEmailEvent>
         Console.WriteLine(emailEvent.Id + "_" + emailEvent.Email);
         log.Info($"Consume event: {emailEvent.Id}");
         
-        var template = await templatesStorage.Get(emailEvent.TemplateName + TemplateType.Email);
+        var template = await templatesStorage.Get(emailEvent.TemplateId);
         if (emailEvent.Variables is not null)
             template.SetVariables(emailEvent.Variables);
         
