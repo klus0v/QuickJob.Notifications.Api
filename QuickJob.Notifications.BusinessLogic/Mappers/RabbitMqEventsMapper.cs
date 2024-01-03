@@ -6,5 +6,5 @@ namespace QuickJob.Notifications.BusinessLogic.Mappers;
 public static class RabbitMqEventsMapper
 {
     public static SendEmailEvent ToEvent(this SendEmailRequest request) => 
-        new(request.Email, request.TemplateId, request.Variables);
+        new(request.Email, request.TemplateName, request.Variables);
 }

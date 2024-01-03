@@ -4,9 +4,9 @@ using QuickJob.Notifications.DataModel.Configuration;
 using IConfigurationProvider = Vostok.Configuration.Abstractions.IConfigurationProvider;
 
 
-namespace QuickJob.Notifications.Api.DI;
+namespace QuickJob.Notifications.Core.Factories;
 
-internal class MongoFactory
+public class MongoFactory
 {
     private readonly IConfigurationProvider configuration;
 

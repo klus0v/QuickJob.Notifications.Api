@@ -3,9 +3,9 @@ using System.Net.Mail;
 using QuickJob.Notifications.DataModel.Configuration;
 using IConfigurationProvider = Vostok.Configuration.Abstractions.IConfigurationProvider;
 
-namespace QuickJob.Notifications.Api.DI;
+namespace QuickJob.Notifications.Core.Factories;
 
-internal class SmtpClientFactory
+public class SmtpClientFactory
 {
     private readonly IConfigurationProvider configuration;
 

@@ -1,29 +1,11 @@
-﻿using MassTransit;
+﻿using QuickJob.Notifications.Consumer.DI;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddMassTransit(x =>
-{
-   x.SetKebabCaseEndpointNameFormatter();
-   x.SetInMemorySagaRepositoryProvider();
-
-   var assembly = typeof(Program).Assembly;
-
-   x.AddConsumers(assembly);
-   x.AddSagaStateMachines(assembly);
-   x.AddSagas(assembly);
-   x.AddActivities(assembly);
-   
-   x.UsingRabbitMq((context, cfg) =>
-   {
-       cfg.Host("localhost",  "/", host =>
-       {
-           host.Username("guest");
-           host.Password("guest");
-       });
-       cfg.ConfigureEndpoints(context);
-   });
-});
+builder.Services.AddSettings();
+builder.Services.AddExternalServices();
+builder.Services.AddSystemServices();
+builder.Services.AddRabbitMq();
 
 var app = builder.Build();
 

@@ -3,9 +3,9 @@ using QuickJob.Users.Client;
 using IConfigurationProvider = Vostok.Configuration.Abstractions.IConfigurationProvider;
 
 
-namespace QuickJob.Notifications.Api.DI;
+namespace QuickJob.Notifications.Core.Factories;
 
-internal class UsersClientFactory
+public class UsersClientFactory
 {
     private readonly IConfigurationProvider configuration;
 

@@ -8,7 +8,7 @@ public class SendEmailRequest
     public string Email { get; set; }
     
     [Required]
-    public string TemplateId { get; set; }
+    public string TemplateName { get; set; }
     
     public Dictionary<string, string>? Variables { get; set; }
 }

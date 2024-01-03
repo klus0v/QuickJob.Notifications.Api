@@ -19,7 +19,7 @@ public class EmailService : IEmailService
     {
         smtpSettings = configurationProvider.Get<SmtpSettings>();
         this.smtpClient = smtpClient;
-        this.log = log;
+        this.log = log.ForContext(nameof(EmailService));
     }
 
     public Task SendMessage(EmailRequest request)

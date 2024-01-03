@@ -7,6 +7,5 @@ public class MongoSettings
     public int Port { get; set; }
     public string Timeout { get; set; }
     public bool UseTls { get; set; }
-    public string NewsCollection { get; set; }
-    public string TagsCollection { get; set; }
+    public string TemplatesCollection { get; set; }
 }

@@ -11,7 +11,7 @@ public sealed class MongoProvider : IMongoProvider
 
     public MongoProvider(ILog log)
     {
-        this.log = log;
+        this.log = log.ForContext(nameof(MongoProvider));
     }
 
     public async Task<TEntity> Get<TEntity>(IMongoCollection<TEntity> mongoCollection, ExpressionFilterDefinition<TEntity> filter)
