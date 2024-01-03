@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickJob.Notifications.Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickJob.Notifications.BusinessLogic", "QuickJob.Notifications.BusinessLogic\QuickJob.Notifications.BusinessLogic.csproj", "{D6A54E8B-E127-4337-B515-5A2884238482}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickJob.Notifications.Client", "QuickJob.Notifications.Client\QuickJob.Notifications.Client.csproj", "{BDA7ABE8-1721-43FB-9348-87FE4F4F1E65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{D6A54E8B-E127-4337-B515-5A2884238482}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6A54E8B-E127-4337-B515-5A2884238482}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6A54E8B-E127-4337-B515-5A2884238482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDA7ABE8-1721-43FB-9348-87FE4F4F1E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDA7ABE8-1721-43FB-9348-87FE4F4F1E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDA7ABE8-1721-43FB-9348-87FE4F4F1E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDA7ABE8-1721-43FB-9348-87FE4F4F1E65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
